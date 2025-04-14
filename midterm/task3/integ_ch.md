@@ -1,0 +1,4 @@
+What happens: The recomputed HMAC value is completely different from the original HMAC calculated in Task 3B.
+Why HMAC is important: HMAC (Hash-based Message Authentication Code) provides both data integrity and authenticity.
+Integrity: Because the hash function output changes drastically even with a tiny change in the input (the avalanche effect), the different HMAC value proves the data has been modified since the original HMAC was calculated.
+Authenticity: Because the HMAC calculation requires the secret key (secretkey123), only someone who possesses the key can generate a valid HMAC for a given message. If you receive a message and can compute the same HMAC using your shared secret key, you can be reasonably sure the message came from someone else who also has the key and hasn't been tampered with by someone who doesn't. It authenticates the source (in the sense that they knew the key) as well as the data itself.
