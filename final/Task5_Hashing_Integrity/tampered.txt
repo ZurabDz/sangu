@@ -1,0 +1,4 @@
+Task5_Hashing_Integrity/tampered.txt:
+This is the original file content.
+It should remain unchanged for the first check.
+Oops, I added this extra line!

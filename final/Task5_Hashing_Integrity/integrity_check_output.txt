@@ -1,0 +1,23 @@
+(nemo_to_flax) penguin@foxhole:~/Desktop/homework/final/Task5_Hashing_Integrity$ bash check_tampered.sh 
+Checking original
+
+Checking integrity for original.txt...
+Comparing current hashes with stored hashes:
+  Stored Hashes: {'md5': 'c5945a7f2e250bea842a46e1937925d1', 'sha1': '961e92ba5f7a05a7d5dafcff41d2049cd9571e38', 'sha256': 'e1f1c31c0c757814e8a18fc91600aecacd0070f1558374a5a59320e59fc323cc'}
+  Current Hashes: {'md5': 'c5945a7f2e250bea842a46e1937925d1', 'sha1': '961e92ba5f7a05a7d5dafcff41d2049cd9571e38', 'sha256': 'e1f1c31c0c757814e8a18fc91600aecacd0070f1558374a5a59320e59fc323cc'}
+
+Result: PASS - File integrity verified. Hashes match.
+(nemo_to_flax) penguin@foxhole:~/Desktop/homework/final/Task5_Hashing_Integrity$ bash check_tampered.sh 
+Checking original
+
+# Modified with tampered data
+Checking integrity for original.txt...
+Comparing current hashes with stored hashes:
+  Stored Hashes: {'md5': 'c5945a7f2e250bea842a46e1937925d1', 'sha1': '961e92ba5f7a05a7d5dafcff41d2049cd9571e38', 'sha256': 'e1f1c31c0c757814e8a18fc91600aecacd0070f1558374a5a59320e59fc323cc'}
+  Current Hashes: {'md5': '522792361eaecefe4cd4cb3eeb00ec4d', 'sha1': 'd43989e692aa0b09b7b1f9ea481c349632cdc0e1', 'sha256': 'afbef69891444b0638073bd1c17c56efde616788ca1b93c6376c9eba7db8ea4f'}
+  MISMATCH found for MD5!
+  MISMATCH found for SHA1!
+  MISMATCH found for SHA256!
+
+Result: FAIL - File has been modified or corrupted! Hashes DO NOT match.
+(nemo_to_flax) penguin@foxhole:~/Desktop/homework/final/Task5_Hashing_Integrity$ 

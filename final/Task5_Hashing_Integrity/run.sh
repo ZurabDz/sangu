@@ -1,0 +1,1 @@
+python hash_util.py original.txt --update
